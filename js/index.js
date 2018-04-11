@@ -10,6 +10,14 @@ function autoplay(){
 	$(".banner ol li").eq(index).addClass("act").siblings().removeClass("act")
 	$(".banner ul li").eq(index).fadeIn(1000).siblings().fadeOut(1000)
 }
+$(".banner ol li").mouseenter(function(){
+	clearInterval(timer);
+	index=$(this).index()-1;
+	autoplay();
+}).mouseleave(function(){
+	timer=setInterval(autoplay,2000);
+})
+
 
 
 //6楼层效果

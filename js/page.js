@@ -8,7 +8,10 @@ $(".header-nav-cont ul li").eq(2).mouseenter(function(){
 $(".main-top dl dd h6 span").click(addShop)
 $(".sellAll dd p i").click(addShop)
 $(".mainR .R1 p i").click(addShop)
-
+//点击更多产品 dd p i
+$(".main-top dl dd p i").click(function(){
+	location.href="http://www.zhiwo.com/products/c136";
+})
 //放大镜
 $(".smallList li").mouseenter(function(){
 	var index=$(this).index();
@@ -54,7 +57,10 @@ $(".sellAll").find("img").hover(function(){
 },function(){
 	$(this).css("opacity","0.4")
 })
-
+//划过左侧  p下的dl显示
+$(".mainL p").mouseenter(function(){
+	$(this).siblings().slideDown()
+})
 //吸顶$(".mainR .R1 p")
 $(window).scroll(function(){
 	var sTop=$(document).scrollTop();
@@ -87,4 +93,20 @@ $(".main-top dl dd p span em").eq(0).click(function(){
 	
 })
 //划过商品参数里的图  改变他的宽高
-
+$(".Rmain ol img").mouseenter(function(){
+	$(this).stop().animate({
+		width:200,
+		height:200
+	},1500)
+}).mouseleave(function(){
+	$(this).stop().animate({
+		width:160,
+		height:160
+	},1500)
+})
+//点击锚点   a变样式
+$(".mainR .R1 p a").click(function(){
+	$(this).addClass("select")
+	       .siblings()
+	       .removeClass("select")
+})

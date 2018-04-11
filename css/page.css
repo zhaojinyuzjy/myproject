@@ -180,6 +180,7 @@
 	margin-left: 20px;
 	line-height:76px;
 	color: #00c8ff;
+	cursor: pointer;
 }
 .main-top dl dd h6{
 	height:44px;
@@ -194,6 +195,7 @@
 	float: left;
 	background:#ff643c;
 	color: #fff;
+	cursor: pointer;
 	font-size:22px;
 	line-height: 44px;
 	text-align: center;
@@ -316,6 +318,7 @@
 	text-align: center;
 }
 .main-center .mainL .L1 dl{
+	display: none;
 	height:120px;
 	width:230px;
 	margin: 20px 20px;
@@ -360,6 +363,10 @@
 	padding: 0 35px;
 	float: left;
 }
+.mainR .R1 p a.select{
+	background: #00C8FF;
+	
+}
 .main-center .mainR .R1 p span{
 	display: block;
 	width:260px;
@@ -392,20 +399,20 @@
 	margin:0 20px;
 	/*background: yellow;*/
 }
-.Rmain2{
+.Rmain2,.Rmain3,.Rmain4{
 	width:760px;
 	height:100%;
 	margin:0 20px;
 	/*background: blue;*/
 }
-.Rmain h3,.Rmain2 h3{
+.Rmain h3,.Rmain2 h3,.Rmain3 h3,.Rmain4 h3{
 	height:45px;
 	line-height: 45px;
 	border-bottom: 1px solid #6C6C6C;
 	font-size: 16px;
 	
 }
-.Rmain h3 em,.Rmain2 h3 em{
+.Rmain h3 em,.Rmain2 h3 em,.Rmain3 h3 em,.Rmain4 h3 em{
 	float:left;
 	display: block;
 	height:17px;
@@ -441,6 +448,82 @@
   top:50px;
   left:300px;
 }
-.Rmain2 img{
+.Rmain2 img,.Rmain3 img{
 	width:760px;
+}
+.Rmain4 .user{
+	width:760px;
+}
+.Rmain4 .user dl{
+	height: 130px;
+	/*background: red;*/
+	margin: 20px 0;
+}
+.Rmain4 .user dl dt{
+	float: left;
+	height:130px;
+	width:130px;
+	/*background: yellow;*/
+}
+.Rmain4 .user dl dt img{
+	width:100px;
+	height:90px;
+	margin:15px 0 0 15px;
+	
+}
+.Rmain4 .user dl dt h4{
+	width:100px;
+	text-align: center;
+	height:20px;
+	margin-left: 15px;
+	line-height: 20px;
+}
+.Rmain4 .user dl dd{
+	float: left;
+	height:130px;
+	width:600px;
+	margin-left: 30px;
+	background:#f6f6f3;
+}
+.Rmain4 .user dl dd span{
+	display: block;
+	width:600px;
+	height:130px;
+}
+.Rmain4 .user dl dd span h5{
+	height:40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.Rmain4 .user dl dd span h5 b{
+	display: block;
+	color: #ff643c;
+	float: left;
+	margin-left: 20px;
+}
+.Rmain4 .user dl dd span h5 i{
+	display: block;
+	float: right;
+	color: #C4C4C4;
+	margin-right: 30px;
+}
+.Rmain4 .user dl dd span h6{
+	height:60px;
+	line-height: 60px;
+	font-size: 16px;
+	text-align: center;
+}
+.Rmain4 .user dl dd span strong{
+	color: #ff643c;
+	height:30px;
+	line-height: 30px;
+	display: block;
+	width:100px;
+	margin-left: 500px;
+}
+.Rmain4 .user dl dd span strong em{
+	color: black;
+	height:30px;
+	line-height: 30px;
+	font-size:14px;
 }

@@ -32,16 +32,13 @@
 	left:1000px;
 }
 .banner ol li{
-	width:25px;
-	height:25px;
-	line-height: 25px;
-	text-align: center;
+	width:20px;
+	height:20px;
 	float: left;
 	margin-right: 20px;
-	background: lightgray;
-	/*border-radius: 50%;*/
-	border: 1px solid orange;
-	opacity: 0.5;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
 }
 .banner ol li.act{
 	background: #00C8FF;

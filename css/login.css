@@ -1,0 +1,158 @@
+.main{
+	height:790px;
+	width:1263px;
+	background: url("../images/register/lbg.jpg") no-repeat;
+	position: relative;
+}
+.login{
+	width:492px;
+	height:530px;
+	background: #fff;
+	position: absolute;
+	top:100px;
+	left: 700px;
+	box-shadow: 5px 5px 5px 5px pink;
+}
+.login form{
+	width:430px;
+	height:360px;
+	margin:28px 0px 0 38px ;
+	border-bottom: 1px dashed #6C6C6C;
+	/*background: red;*/
+}
+.login form>h3{
+	width:430px;
+	height:40px;
+	font-size: 18px;
+	line-height:40px;	
+}
+.login form h3>i{
+	font-size:24px;
+	display: block;
+	width:260px;
+	height:40px;
+	float: left;
+}
+.login form h3>a{
+	font-size: 14px;
+	color:#00C8FF;
+	float: left;
+	display: block;
+	width:90px;
+	height:40px;
+	margin-right: 80px;
+}
+.login form h4{
+	width:430px;
+	height:35px;
+	line-height: 35px;
+}
+.login form p{
+	width:430px;
+	height:40px;
+	line-height: 40px;	
+}
+.login form>p input{
+	display: block;
+	width:320px;
+	height:40px;
+	float: left;
+}
+
+.login form>p span{
+	display: block;
+	width:106px;
+	height:44px;
+	line-height: 42px;
+	float: left;
+	text-align: center;
+	background: green;
+}
+.login form>p:nth-of-type(3) input{
+	display: block;
+	width: 170px;
+	height: 40px;
+	float: left;
+}
+.login form>p:nth-of-type(3) b{
+	display: block;
+	width:75px;
+	height:42px;
+	margin-left: 20px;
+	line-height: 42px;
+	text-align: center;
+	float: left;
+	color:orange;
+	border: 1px solid #C4C4C4;
+}
+.login form>p:nth-of-type(3) a{
+	display: block;
+	width:50px;
+	height:44px;
+	line-height: 44px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	color: #00C8FF;
+}
+.login form>p:nth-of-type(4) input{
+	display: block;
+	width:15px;
+	height:15px;
+	float: left;
+	margin-top: 13px;
+}
+.login form>p:nth-of-type(4) b{
+	display: block;
+	width:100px;
+	height:40px;
+	float: left;
+	color: #00C8FF;
+}
+.login form>p:nth-of-type(4) i{
+	display: block;
+	width:60px;
+	margin-left: 145px;
+	float: left;
+	color: #C4C4C4;
+}
+.login form>p:nth-of-type(5) input{
+	background: #00C8FF;
+	color: #fff;
+	border: none;
+	font-size: 18px;
+}
+
+
+.logobox{
+	width:330px;
+	height:140px;
+	margin: 0 0px 0 38px;
+	
+}
+.logobox h5{
+	height:44px;
+	font-size: 14px;
+	line-height: 44px;
+}
+.logobox ul{
+	height:58px;
+}
+.logobox ul li{
+	float: left;
+	margin:0 3px 10px 3px;
+}
+.logobox ul li img{
+	width:20px;
+	height:20px;
+	float: left;
+	margin-right: 3px;
+}
+.logobox ul li a{
+	display: block;
+	width:50px;
+	height:20px;
+	line-height: 20px;
+	text-align: center;
+	float: left;
+}
