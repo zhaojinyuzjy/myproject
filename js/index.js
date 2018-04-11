@@ -1,42 +1,3 @@
-//1主菜单
-$(".ul-right li").hover(function(){
-	$(this).find("ul").css("display","block")
-	$(this).find("img").css("display","block")
-},function(){
-	$(this).find("ul").css("display","none")
-	$(this).find("img").css("display","none")
-})
-
-//2点击搜索
-$(".header-search input").eq(1).click(function(){
-	var txt=$(".header-search input").eq(0).val();
-	location.href="http://www.zhiwo.com/product/search?keyword="+txt+"&search='搜索'"
-})
-
-
-//3heaer-top-nav  菜单
-$(".header-nav-cont ul li:not(:eq(2))").hover(function(){
-	$(this).addClass("visit").siblings().removeClass("visit")
-})
-$(".header-nav-cont ul li").eq(1).mouseenter(function(){
-	$(".li_list").css("display","block")
-}).mouseleave(function(){
-	$(".li_list").css("display","none")
-	$(this).removeClass("visit")
-})
-$(".header-nav-cont ul li").eq(2).mouseenter(function(){
-	$(this).css("background-image","url(images/haitao2.gif)")
-}).mouseleave(function(){
-	$(this).css("background-image","url(images/haitao1.gif)")
-})
-
-//4划过小logo  显示a
-$(".header-nav-cont ol li").hover(function(){
-	$(this).find("a").stop().show(1000)
-	             
-},function(){
-	$(this).find("a").stop().hide(1000)
-})
 
 //5轮播图
 var index=0;
@@ -84,7 +45,7 @@ $(window).scroll(function(){
 	}
 	
 })
-//7点击知我首页   回到顶部
+//点击知我首页   回到顶部
 $(".loutiNav li").eq(0).click(function(){
 	$("html,body").animate({scrollTop:0},2000)
 })
@@ -179,12 +140,9 @@ $(".pinImg-big .span1").click(function(){
 	                          .siblings()
 	                          .css("z-index",0)
 })
-//10.右侧导航
-$(".pnav li").hover(function(){
-	$(this).addClass("curr")
-	       .siblings()
-	       .removeClass("curr")
-	$(this).find("p").css("display","block")
-},function(){
-	$(this).find("p").css("display","none")
-})
+
+//12.点击加入购物车 
+//今日头条
+$(".toutiao1 .p2 i").click(addShop)
+//今日新品
+$(".newp2 span").click(addShop)
