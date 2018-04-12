@@ -1,13 +1,30 @@
 /*公共js*/
 
 //1主菜单
-$(".ul-right li").hover(function(){
-	$(this).find("ul").css("display","block")
-	$(this).find("img").css("display","block")
+$(".ul-right>li").hover(function(){
+	$(this).css({
+		"background-color":"#fff"
+	})
+	$(this).find("ul").slideDown();
+	$(this).find("img").slideDown();
 },function(){
-	$(this).find("ul").css("display","none")
-	$(this).find("img").css("display","none")
+	$(this).css("background-color","#f2f2f2")
+	$(this).find("ul").slideUp();
+	$(this).find("img").slideUp();
 })
+$(".ul-right #ll1").hover(function(){
+	$(this).css({
+		"background": "url('./images/jiantou2.jpg') no-repeat 70px center",
+		"background-color":"#fff"
+	})
+},function(){
+	$(this).css({
+		"background": "url('./images/jiantou.jpg') no-repeat 70px center",
+		"background-color":"#f2f2f2"
+	})
+})
+	
+
 
 //2点击搜索
 $(".header-search input").eq(1).click(function(){
@@ -66,7 +83,7 @@ $(".pnav li").eq(4).click(function(){
 })
 
 //加入购物车
-var sum=0;
+var sum = 0
 function addShop(){
 	//1 定义三点坐标  商品的起始点  结束点  最高点
 		var startPoint = {
@@ -111,11 +128,12 @@ function addShop(){
 			}else{
 				clearInterval(timer2);
 				good.remove();
-				sum++;
+			    sum=parseInt($(".pnav b").html());
 				var m = parseInt($(".numm").html())
 				if(m){
-					$(".pnav b").html(sum + m-1 )
+					$(".pnav b").html(sum + m )
 				}else{
+					sum++;
 					$(".pnav b").html(sum)
 				}
 				

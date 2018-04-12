@@ -79,7 +79,12 @@ body,html{
 	width: 85px;
 	position: relative;
 }
-
+.ul-right>li:nth-child(2){
+	background: url("../images/phone.jpg") no-repeat 10px center;
+}
+.ul-right>li:nth-of-type(1),.ul-right>li:nth-of-type(3),.ul-right>li:nth-of-type(4){
+	background: url("../images/jiantou.jpg") no-repeat 70px center;
+} 
 /*js*/
 /*划过li时     li下的ul显示    img显示*/
 .ul-right li ul{
@@ -252,6 +257,18 @@ body,html{
 	padding-top: 20px;
 	font-size: 18px;
 	border-bottom: 1px dashed #6C6C6C;
+}
+.li_list dl dt img{
+	display: block;
+	width:20px;
+	margin-top:6px;
+	height:20px;
+	float: left;
+}
+.li_list dl dt img i{
+	display: block;
+	height:30px;
+	float: left;
 }
 .li_list  dl dd{
 	float:left;

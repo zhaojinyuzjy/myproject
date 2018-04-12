@@ -53,8 +53,10 @@ $(".small").mousemove(function(e){
 
 //划过特卖图片  透明度改变
 $(".sellAll").find("img").hover(function(){
+	clearInterval(timer3)
 	$(this).css("opacity","1")
 },function(){
+	timer3=setInterval(autoplay1,2000);
 	$(this).css("opacity","0.4")
 })
 //划过左侧  p下的dl显示
@@ -72,25 +74,21 @@ $(window).scroll(function(){
 	}else{
 		$(".mainR .R1 p").css({
 			"position":"static"
-			
 		})
 	}
 })
 
 $(".pnav ul li b").html(sum);
 //点击+- 数字相应加减
-var index2=1;
 $(".main-top dl dd p span em").eq(2).click(function(){
-	index2++;
-	$(this).prev().html(index2)
+	var index2 = $(this).prev().html();
+	$(this).prev().html(++index2)
 })
 $(".main-top dl dd p span em").eq(0).click(function(){
-	if(index2<=1){
-		index2=1;
-	}
-	index2--;
-	$(this).next().html(index2)
-	
+	var index2 = $(this).next().html();
+	if(index2>=2){
+		$(this).next().html(--index2)
+	}	
 })
 //划过商品参数里的图  改变他的宽高
 $(".Rmain ol img").mouseenter(function(){
@@ -110,3 +108,17 @@ $(".mainR .R1 p a").click(function(){
 	       .siblings()
 	       .removeClass("select")
 })
+
+//轮播
+var timer3=null;
+var index3=0;
+timer3=setInterval(autoplay1,2000);
+function autoplay1(){
+	index3++;
+	$(".sellAll").animate({"left":-275*index3},100,function(){
+		$(".sellAll").append($(".sellAll").find("dl").eq(0).clone(true));
+		$(".sellAll").find("dl").eq(0).remove();
+		$(".sellAll").css("left",0);
+		
+	})
+}

@@ -106,6 +106,7 @@
 	line-height: 68px;
 	font-size:14px;
 	text-align: center;
+	color: #00C8FF;
 }
 .toutiao1 .p1,.toutiao1 .p2,.toutiao1 .p3{
 	width:350px;
@@ -173,22 +174,17 @@
 	font-size:18px;
 	text-align: left;
 }
-/*.pin-top-img{
-	transform-style: preserve-3d;
-}*/
+
 .pin-top-img li{
 	float: left;
+	position: relative;
 	margin-right: 20px;
 	margin-bottom: 20px;
-	/*animation: move 3s linear 10s;*/
 }
 .pin-top-img li:hover{
 	box-shadow: 5px 5px 5px pink;
 }
-/*@-webkit-keyframes move{
-	0%{transform: scale(0.5);}
-	100%{transform: scale(1);}
-}*/
+
 
 .pin-top-img .marginNo{
 	margin-right: 0px;
@@ -327,7 +323,8 @@
 	color:#00C8FF;
 	line-height:30px;
 	text-align: center;
-	background: #fff;
+	/*background: #fff;*/
+	border:1px solid #00C8FF;
 }
 .xinpin .new dl dd{
 	width:314px;
@@ -335,7 +332,7 @@
 	height:160px;
 	
 }
- .newp1{
+.newp1{
 	height:70px;
 	line-height: 22px;
 }

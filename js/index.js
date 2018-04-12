@@ -110,6 +110,10 @@ $(".ul-biaoti li").hover(function(){
 	        .siblings().removeClass("active")
 	//对应的图片组出现
 	$(".pinImg ol").eq($(this).index()).css("z-index",10)
+	//箭头上的图片
+	$(".pinImg-big ul li").eq($(this).index()).css({
+		"opacity":1,	
+	}).siblings().css("opacity",0)
 },function(){
 	$(".pinImg ol").eq($(this).index()).css("z-index",0)
 })
@@ -154,3 +158,14 @@ $(".pinImg-big .span1").click(function(){
 $(".toutiao1 .p2 i").click(addShop)
 //今日新品
 $(".newp2 span").click(addShop)
+
+//划过品牌团的li  整个li移动一下  离开  回来
+$(".pinpai-top ul li").hover(function(){
+	$(this).animate({
+		left:10
+	},100)
+},function(){
+	$(this).animate({
+		left:0
+	},100)
+})

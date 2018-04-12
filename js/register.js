@@ -1,10 +1,42 @@
+$("input").focus(function(){
+	$(this).css({
+		"border":"3px solid #00C8FF",
+	})
+}).blur(function(){
+	$(this).css(
+		"border",""
+	)
+})
 //表单验证
+//var flagPush=true;//可以push
+var arr=[];
 $(".register form").submit(function(){
-	if(flagPhone && flagPwd && flagPwdre && flagYZ){
+    if(flagPhone && flagPwd /*&& flagPwdre && flagYZ*/){
+		//存cookie
+		var json={
+			"phone":$("#phone").val(),
+			"pwd":$("#pwd").val()
+		}
+	     oldCookie=getCookie("user");
+		var flagPush=true;//可以push
+		if(oldCookie.length!=0){
+			arr=oldCookie;
+			/*for(var i=0;i<arr.length;i++){
+				if(json.phone){
+					flagPush=false;
+					break;
+				}
+			}*/
+		}
+		if(flagPush){
+			arr.push(json)
+		}
+		setCookie("user",JSON.stringify(arr))
 		return true;
 	}else{
 		return false;
 	}
+	
 })
 //验证手机号
 var flagPhone=null;
@@ -15,7 +47,7 @@ $(".register form p input").eq(0).blur(function(){
 		$("#s1").html("合法");
 		flagPhone=true;
 	}else{
-		$("#s1").html("输入有误");
+		$("#s1").html("手机格式有误，请重新输入");
 		flagPhone=false;
 	}
 })
@@ -28,7 +60,7 @@ $(".register form p input").eq(1).blur(function(){
 		$("#s2").html("合法");
 		flagPwd=true;
 	}else{
-		$("#s2").html("6--16位字符");
+		$("#s2").html("密码长度需6-16位字符");
 		flagPwd=false;
 	}
 })
@@ -73,7 +105,7 @@ $(".register form p input").eq(3).blur(function(){
 		$("#s4").html("ok");
 		flagYZ=true;
 	}else{
-		$("#s4").html("验证码有误");
+		$("#s4").html("验证码有误,请重新输入");
 		flagYZ=false;
 	}
 })
