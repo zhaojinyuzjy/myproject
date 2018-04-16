@@ -83,13 +83,15 @@ $(".pnav li").eq(4).click(function(){
 })
 
 //加入购物车
-var sum = 0
+var sum = 0;
 function addShop(){
 	//1 定义三点坐标  商品的起始点  结束点  最高点
 		var startPoint = {
  			x : $(this).offset().left + $(this).width()/2,
  			y : $(this).offset().top 
 		}
+		
+		
 		var endPoint = {
  			x : $(".shopcart").offset().left + $(".shopcart").width()/2,
  			y :$(".shopcart").offset().top
@@ -141,3 +143,9 @@ function addShop(){
 		},20)
 
 }
+//划过ul 下的li  
+$(".footer-cont li span").hover(function(){
+	$(this).css("color","red")
+},function(){
+	$(this).css("color","#fff")
+})

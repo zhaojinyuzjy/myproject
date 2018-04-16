@@ -52,13 +52,13 @@ $(".small").mousemove(function(e){
 
 
 //划过特卖图片  透明度改变
-$(".sellAll").find("img").hover(function(){
+/*$(".sellAll").find("img").hover(function(){
 	clearInterval(timer3)
 	$(this).css("opacity","1")
 },function(){
 	timer3=setInterval(autoplay1,2000);
 	$(this).css("opacity","0.4")
-})
+})*/
 //划过左侧  p下的dl显示
 $(".mainL p").mouseenter(function(){
 	$(this).siblings().slideDown()

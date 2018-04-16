@@ -8,30 +8,17 @@ $("input").focus(function(){
 	)
 })
 //表单验证
-//var flagPush=true;//可以push
+
 var arr=[];
 $(".register form").submit(function(){
-    if(flagPhone && flagPwd /*&& flagPwdre && flagYZ*/){
+    if(flagPhone && flagPwd && flagPwdre && flagYZ){
 		//存cookie
 		var json={
 			"phone":$("#phone").val(),
 			"pwd":$("#pwd").val()
 		}
-	     oldCookie=getCookie("user");
-		var flagPush=true;//可以push
-		if(oldCookie.length!=0){
-			arr=oldCookie;
-			/*for(var i=0;i<arr.length;i++){
-				if(json.phone){
-					flagPush=false;
-					break;
-				}
-			}*/
-		}
-		if(flagPush){
-			arr.push(json)
-		}
-		setCookie("user",JSON.stringify(arr))
+		arr.push(json)
+		setCookie("user",JSON.stringify(arr),1)
 		return true;
 	}else{
 		return false;
@@ -42,7 +29,7 @@ $(".register form").submit(function(){
 var flagPhone=null;
 $(".register form p input").eq(0).blur(function(){
 	var str=$(this).val();
-	var reg=/^[0-9]\d{10}$/;
+	var reg=/^[1-9]\d{10}$/;
 	if(reg.test(str)){
 		$("#s1").html("合法");
 		flagPhone=true;

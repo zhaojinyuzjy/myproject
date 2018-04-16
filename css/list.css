@@ -1,0 +1,113 @@
+.list{
+	height:auto;
+	width:1100px;
+	margin: 0 auto;
+}
+.list .xinpin{
+	height:auto;
+	width:1100px;
+	margin: 0 auto;
+}
+/*新品*/
+.xinpin h3{
+	height:75px;
+	line-height: 93px;
+	font-size: 16px;
+	text-align: left;
+}
+.xinpin .new{
+	height: 2120px;
+}
+.xinpin .new dl{
+	cursor: pointer;
+	float: left;
+	width: 350px;
+	height: 510px;
+	margin-right: 22px;
+	margin-bottom: 20px;
+	background: #fff;
+	position: relative;
+}
+.xinpin .new .marginNone{
+	margin-right: 0;
+}
+.xinpin .new dl dt{
+	position: relative;
+	
+}
+.xinpin .new dl dt img{
+	width:350px;
+	height:350px;
+	opacity: 0.4;
+}
+
+.xinpin .new dl dd{
+	width:314px;
+	padding:0 18px;
+	height:160px;
+	/*position: absolute;
+	top:350px;
+	left:0;
+	*/
+}
+.newp1{
+	height:70px;
+	line-height: 22px;
+}
+.newp1 b,.newp1 i{
+	color:#FF643C;
+}
+.newp1 b{
+	font-size: 18px;
+}
+.newp1 i{
+	font-size: 16px;
+}
+.newp2,.newp5{
+	height:47px;
+	border-bottom: 1px dashed #C4C4C4;
+}
+.newp2 b,.newp5 b{
+	display: block;
+	width:220px;
+	height:27px;
+	float: left;
+	font-size: 24px;
+}
+.newp2 del,.newp5 del{
+	font-size: 16px;
+	color:#c4c4c4;
+}
+/*js*/
+/*点击加入购物车*/
+.newp2 span,.newp5 span{
+	display: block;
+	width:90px;
+	height:27px;
+	line-height: 27px;
+	text-align: center;
+	float: right;
+	background: #FF643C;
+	font-size: 12px;
+	color:#fff;
+}
+/*js*/
+/*加入倒计时*/
+.newp3,.newp4{
+	height:40px;
+	line-height: 40px;
+	color:#C4C4C4;
+}
+.newp3 span,.newp4 span{
+	display: block;
+	width:200px;
+	float: left;
+}
+.newp3 span{
+	color: #00C8FF;
+}
+.newp3 b,.new4 b{
+	display: block;
+	float: right;
+}
+

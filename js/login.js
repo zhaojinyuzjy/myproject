@@ -21,7 +21,7 @@ $(".login form").submit(function(){
 var flagPhone=null;
 $(".login form p input").eq(0).blur(function(){
 	var str=$(this).val();
-	var reg=/^[0-9]\d{10}$/;
+	var reg=/^[1-9]\d{10}$/;
 	if(reg.test(str)){
 		var user=getCookie("user");
 		userJson=JSON.parse(user);
@@ -56,6 +56,9 @@ $(".login form p input").eq(1).blur(function(){
 				if($(this).val()==upwd){
 					$("#s2").html("密码正确");
 				    flagPwd=true;
+				}else{
+					$("#s2").html("密码错误");
+				    flagPwd=false;
 				}
 			}else{
 				$("#s1").html("账号不存在");
@@ -67,12 +70,6 @@ $(".login form p input").eq(1).blur(function(){
 		flagPwd=false;
 	}
 })
-
-
-
-
-
-
 
 
 

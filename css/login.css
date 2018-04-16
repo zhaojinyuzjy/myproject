@@ -96,7 +96,8 @@
 	line-height: 42px;
 	text-align: center;
 	float: left;
-	color:orange;
+	color:pink;
+	font-size: 18px;
 	border: 1px solid #C4C4C4;
 }
 .login form>p:nth-of-type(3) a{

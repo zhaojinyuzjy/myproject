@@ -264,7 +264,7 @@
 .sell .sellAll dl dt img{
 	width: 260px;
 	height:208px;
-	opacity: 0.4;
+	/*opacity: 0.4;*/
 }
 .sell .sellAll dl dd{
 	height:118px;
